@@ -1,6 +1,6 @@
 # Jayo's VRC-OSC Bridge for VNyan
 
-Provides a _complete_ implementation of VRChat's OSC Interface. Respond to avatar paramerter chances in the Node Graph and use triggers to drive parameters, inputs, and tracking!
+Provides a _complete_ implementation of VRChat's OSC Interface. Respond to avatar parameter changes in the Node Graph and use triggers to drive parameters, inputs, and tracking!
 
 # Table of contents
 1. [Installation](#installation)
@@ -24,14 +24,14 @@ Provides a _complete_ implementation of VRChat's OSC Interface. Respond to avata
 3. [Development](#development)
 
 ## Installation
-I've made the source of this plugin available here on Github for anyone to build, run, or modify for thier own purposes! 
+I've made the source of this plugin available here on Github for anyone to build, run, or modify for their own purposes! 
 
 Built and ready-to-use copies are available for purchase on my [itch.io](https://jayo-exe.itch.io/vrchat-osc-bridge-for-vnyan) ! You'll get ready-to-use plugin files, access to plugin updates forever, and my gratitude for supporting my continued work!
 
-Once you've got your plugin files (either from a ZIP file from the store, or from your builds from source), installation is simple:
+Once you've got your plugin files (either from a DLL file from the store, or from your builds from source), installation is simple:
 
 1. In VNyan, make sure you've enabled "Allow 3rd party plugins" from the Settings menu.
-2. Extract the contents of the ZIP file _directly_ into your VNyan installation folder_.  This will add the plugin files to your VNyan `Items\Assemblies` folders. If you built your own files you'll need to put them into the Assemblies folder directly.
+2. Copy the DLL file _directly_ into your VNyan installation folder's `Items\Assemblies` folder
 3. Launch VNyan, confirm that a button for the plugin now exists in your Plugins window!
 
 ## Usage
