@@ -31,7 +31,7 @@ Built and ready-to-use copies are available for purchase on my [itch.io](https:/
 Once you've got your plugin files (either from a DLL file from the store, or from your builds from source), installation is simple:
 
 1. In VNyan, make sure you've enabled "Allow 3rd party plugins" from the Settings menu.
-2. Copy the DLL file _directly_ into your VNyan installation folder's `Items\Assemblies` folder.
+2. Copy the DLL file _directly_ into your VNyan installation folder's `Items\Assemblies` folder
 3. Launch VNyan, confirm that a button for the plugin now exists in your Plugins window!
 
 ## Usage
