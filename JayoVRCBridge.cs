@@ -49,7 +49,7 @@ namespace JayoVRCBridge
 
         private bool listenersRegistered = false;
 
-        private string currentVersion = "v0.1.0";
+        private string currentVersion = "v0.1.1";
         private string repoName = "jayo-exe/JayoVRCBridge";
         private string updateLink = "https://jayo-exe.itch.io/vrchat-osc-bridge-for-vnyan";
 
