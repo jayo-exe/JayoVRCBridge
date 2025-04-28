@@ -8,7 +8,7 @@ namespace JayoVRCBridge
     public class VRCPluginManifest : IVNyanPluginManifest
     {
         public string PluginName { get; } = "JayoVRCBridge";
-        public string Version { get; } = "v0.1.1";
+        public string Version { get; } = "v0.1.2";
         public string Title { get; } = "VRChat OSC Bridge";
         public string Author { get; } = "Jayo";
         public string Website { get; } = "https://jayo-exe.itch.io/vrchat-osc-bridge-for-vnyan";

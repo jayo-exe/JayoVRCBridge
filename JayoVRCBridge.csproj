@@ -8,6 +8,7 @@
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="copy &quot;$(TargetDir)JayoVRCBridge.dll&quot; &quot;$(TargetDir)..\..\..\..\..\..\VNyanPlugins\Assets\JayoVRCBridge\Plugins&quot; /Y" />
 		<Exec Command="copy &quot;$(TargetDir)JayoVRCBridge.pdb&quot; &quot;$(TargetDir)..\..\..\..\..\..\VNyanPlugins\Assets\JayoVRCBridge\Plugins&quot; /Y" />
+		<Exec Command="copy &quot;$(TargetDir)JayoVRCBridge.dll&quot; &quot;E:\VNyan\Items\Assemblies&quot; /Y" />
 	</Target>
 	
 	<ItemGroup>
