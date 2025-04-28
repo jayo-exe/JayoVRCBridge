@@ -357,40 +357,40 @@ namespace JayoVRCBridge
 
         public void OnTrackerPositionChangeRequested(int trackerID, float x, float y, float z) {
             string trackerName = trackerID > 0 ? trackerID.ToString() : "head";
-            sendMessage($"tracking/trackers/{trackerName}/position", x, y, z);
+            sendMessage($"/tracking/trackers/{trackerName}/position", x, y, z);
         }
 
         public void OnTrackerRotationChangeRequested(int trackerID, float x, float y, float z) {
             string trackerName = trackerID > 0 ? trackerID.ToString() : "head";
-            sendMessage($"tracking/trackers/{trackerName}/rotation", x, y, z);
+            sendMessage($"/tracking/trackers/{trackerName}/rotation", x, y, z);
         }
 
         public void OnTrackerEyeClosedChangeRequested(float newValue) {
-            sendMessage($"tracking/eye/EyesClosedAmount", newValue);
+            sendMessage($"/tracking/eye/EyesClosedAmount", newValue);
         }
 
         public void OnTrackerEyePitchYawChangeRequested(float x, float y) {
-            sendMessage($"tracking/eye/CenterPitchYaw", x, y);
+            sendMessage($"/tracking/eye/CenterPitchYaw", x, y);
         }
 
         public void OnTrackerEyePitchYawDistanceChangeRequested(float x, float y, float z) {
-            sendMessage($"tracking/eye/CenterPitchYawDist", x, y, z);
+            sendMessage($"/tracking/eye/CenterPitchYawDist", x, y, z);
         }
 
         public void OnTrackerEyeCenterVecChangeRequested(float x, float y, float z) {
-            sendMessage($"tracking/eye/CenterVec", x, y, z);
+            sendMessage($"/tracking/eye/CenterVec", x, y, z);
         }
 
         public void OnTrackerEyeCenterVecFullChangeRequested(float x, float y, float z) {
-            sendMessage($"tracking/eye/CenterVecFull", x, y, z);
+            sendMessage($"/tracking/eye/CenterVecFull", x, y, z);
         }
 
         public void OnTrackerEyeLeftRightPitchYawChangeRequested(Vector2 left, Vector2 right) {
-            sendMessage($"tracking/eye/LeftRightPitchYaw", left.x, left.y, right.x, right.y);
+            sendMessage($"/tracking/eye/LeftRightPitchYaw", left.x, left.y, right.x, right.y);
         }
 
         public void OnTrackerEyeLeftRightVecChangeRequested(Vector3 left, Vector3 right) {
-            sendMessage($"tracking/eye/LeftRightVec", left.x, left.y, left.z, right.x, right.y, right.z);
+            sendMessage($"/tracking/eye/LeftRightVec", left.x, left.y, left.z, right.x, right.y, right.z);
         }
 
     }
