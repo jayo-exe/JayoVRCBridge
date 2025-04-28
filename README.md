@@ -36,9 +36,9 @@ Once you've got your plugin files (either from a DLL file from the store, or fro
 
 ## Usage
 
-This plugin contains an OSC Sender and an OSC Receiver that can connect to VRChat and communicate between VRC and VNyan.
-This is a complete implementation of the VRChat OSC interface documented here: https://docs.vrchat.com/docs/osc-overview .
-Changes to avatar parameters in VRC will be set as VNyan parameters, and will activate a trigger so that your node graph can respond in real time.
+This plugin contains an OSC Sender and an OSC Receiver that can connect to VRChat and communicate between VRC and VNyan.  
+This is a complete implementation of the VRChat OSC interface documented here: https://docs.vrchat.com/docs/osc-overview .  
+Changes to avatar parameters in VRC will be set as VNyan parameters, and will activate a trigger so that your node graph can respond in real time.  
 VNyan trigger can also be used to change VRC avatar parameters, drive control inputs, populate the chatbox, and send body-tracking and eye-tracking telemetry!
 
 In order to avoid conflict with other plugins or VNyan internals, parameter and trigger names related to this plugin are prefixed with `_xjvb_`.
@@ -64,8 +64,8 @@ You can call specially-named tiggers in the VNyan Node Graph to communicate back
 
 Use this trigger to set an Avatar Parameter on your VRChat Avatar from within VNyan.  This could be used to allow VNyan redeems that work inside VRChat if you've built the necessary animations into your avatar!
 
-Trigger Name: `_xjvb_setParam`
-Text1 Value Socket: The name of the VRChat Avatar Parameter to set
+Trigger Name: `_xjvb_setParam`  
+Text1 Value Socket: The name of the VRChat Avatar Parameter to set  
 Text2 Value Socket: string representation of the value to be set
 
 If successful, this parameter change will also result in an inbound parameter change behaviour as described in the **Inbound Parameter Changes** section above.
@@ -86,8 +86,8 @@ Per VRChat's documentation, an Input Axis should be set to a float value between
 - `SpinHoldUD`
 - `SpinHoldLR`
 
-Trigger Name: `_xjvb_setAxis`
-Text1 Value Socket: The name of the VRChat INput Axis to set
+Trigger Name: `_xjvb_setAxis`  
+Text1 Value Socket: The name of the VRChat INput Axis to set  
 Text2 Value Socket: string representation of the value to be set
 
 _Relevant VRChat Documentation:_  https://docs.vrchat.com/docs/osc-as-input-controller#axes
@@ -117,7 +117,7 @@ Per VRChat's documentation, an Input Button should be set to 1 to indicate when 
 - `QuickMenuToggleRight`
 - `Voice`
 
-Trigger Names: `_xjvb_buttonOn` and `_xjvb_buttonOff`
+Trigger Names: `_xjvb_buttonOn` and `_xjvb_buttonOff`  
 Text1 Value Socket: The name of the VRChat Input Button to press/release
 
 _Relevant VRChat Documentation:_  https://docs.vrchat.com/docs/osc-as-input-controller#buttons
@@ -126,9 +126,9 @@ _Relevant VRChat Documentation:_  https://docs.vrchat.com/docs/osc-as-input-cont
 
 Use this Trigger to post a message to the chatbox.  Per VRChat's documentation, the chatbox can only display 144 characters, and no more than 9 lines.
 
-Trigger Name: `_xjvb_setChatbox`
-value1 Value Socket: 1 if chat message should be send immediately, 0 if it should populate into the virtual keyboard
-value2 Value Socket: 1 if the chatbox notification cound should play with this update, 0 if it should be silent
+Trigger Name: `_xjvb_setChatbox`  
+value1 Value Socket: 1 if chat message should be send immediately, 0 if it should populate into the virtual keyboard  
+value2 Value Socket: 1 if the chatbox notification cound should play with this update, 0 if it should be silent  
 text1 Value Socket: the new contents of the chatbox
 
 _Relevant VRChat Documentation:_  https://docs.vrchat.com/docs/osc-as-input-controller#chatbox
@@ -137,7 +137,7 @@ _Relevant VRChat Documentation:_  https://docs.vrchat.com/docs/osc-as-input-cont
 
 Use this trigger to toggle the "typing" indicator in the chatbox.
 
-Trigger Name: `_xjvb_setTyping`
+Trigger Name: `_xjvb_setTyping`  
 value1 Value Socket: 1 to turn the typing indicator on, 0 to turn it off
 
 _Relevant VRChat Documentation:_  https://docs.vrchat.com/docs/osc-as-input-controller#chatbox
@@ -148,11 +148,11 @@ VRChat supports position and rotation tracking for up to 8 OSC body Trackers, as
 
 Note that **there is no built-in mechnaism in VNyan to get this information in a format that is usable here**! Tracker telemetry triggers are provided for feature-completeness with VRChat's OSC spec. 
 
-Trigger Names: `_xjvb_trackerPos` and `_xjvb_trackerRot`
-value1 Value Socket: the ID of the tracker to set (use 0 for the head tracker)
-text1 Vale Socket: string representation of the X coordinate of the position or rotation vector
-text2 Vale Socket: string representation of the Y coordinate of the position or rotation vector
-text3 Vale Socket: string representation of the Z coordinate of the position or rotation vector
+Trigger Names: `_xjvb_trackerPos` and `_xjvb_trackerRot`  
+value1 Value Socket: the ID of the tracker to set (use 0 for the head tracker)  
+text1 Value Socket: string representation of the X coordinate of the position or rotation vector  
+text2 Value Socket: string representation of the Y coordinate of the position or rotation vector  
+text3 Value Socket: string representation of the Z coordinate of the position or rotation vector
 
 _Relevant VRChat Documentation:_  https://docs.vrchat.com/docs/osc-trackers
 
@@ -167,46 +167,46 @@ _Relevant VRChat Documentation:_  https://docs.vrchat.com/docs/osc-eye-tracking
 
 ##### Eyes Closed Amount
 
-Trigger Name: `_xjvb_eyeClosed`
+Trigger Name: `_xjvb_eyeClosed`  
 text1 Value Socket: string representation of a float between 0.0 and 1.0 indicating how closed the eyes are
 
 ##### Set Eyes Center Pitch Yaw
 
-Trigger Name: `_xjvb_eyePitchYaw`
-text1 Value Socket: string representation of a float for the pitch of the eye gaze
+Trigger Name: `_xjvb_eyePitchYaw`  
+text1 Value Socket: string representation of a float for the pitch of the eye gaze  
 text2 Value Socket: string representation of a float for the yaw of the eye gaze
 
 ##### Set Eyes Center Pitch Yaw Dist
 
-Trigger Name: `_xjvb_eyePitchYawDist`
-text1 Value Socket: string representation of a float for the pitch of the eye gaze
-text2 Value Socket: string representation of a float for the yaw of the eye gaze
+Trigger Name: `_xjvb_eyePitchYawDist`  
+text1 Value Socket: string representation of a float for the pitch of the eye gaze  
+text2 Value Socket: string representation of a float for the yaw of the eye gaze  
 text3 Value Socket: string representation of a float for the distance of the eye gaze
 
 ##### Set Eyes Center Vector
 
-Trigger Name: `_xjvb_eyeCenterVec`
-text1 Vale Socket: string representation of the X coordinate of the gaze vector
-text2 Vale Socket: string representation of the Y coordinate of the gaze vector
-text3 Vale Socket: string representation of the Z coordinate of the gaze vector
+Trigger Name: `_xjvb_eyeCenterVec`  
+text1 Value Socket: string representation of the X coordinate of the gaze vector  
+text2 Value Socket: string representation of the Y coordinate of the gaze vector  
+text3 Value Socket: string representation of the Z coordinate of the gaze vector
 
 ##### Set Eyes Center Vector Full
 
-Trigger Name: `_xjvb_eyeCenterVecFull`
-text1 Vale Socket: string representation of the X coordinate of the gaze vector
-text2 Vale Socket: string representation of the Y coordinate of the gaze vector
-text3 Vale Socket: string representation of the Z coordinate of the gaze vector
+Trigger Name: `_xjvb_eyeCenterVecFull`  
+text1 Value Socket: string representation of the X coordinate of the gaze vector  
+text2 Value Socket: string representation of the Y coordinate of the gaze vector  
+text3 Value Socket: string representation of the Z coordinate of the gaze vector
 
 ##### Set Eyes Left Right Pitch Yaw
 
-Trigger Name: `_xjvb_eyeLRPitchYaw`
-text1 Value Socket: string respresentation of two floats (separated by commas) for the pitch and yaw of the left eye, e.g. `1.234,56.7`
+Trigger Name: `_xjvb_eyeLRPitchYaw`  
+text1 Value Socket: string respresentation of two floats (separated by commas) for the pitch and yaw of the left eye, e.g. `1.234,56.7`  
 text2 Value Socket: string respresentation of two floats (separated by commas) for the pitch and yaw of the right eye, e.g. `1.234,56.7`
 
 ##### Set Eyes Left Right Vector
 
-Trigger Name: `_xjvb_eyeLRVec`
-text1 Value Socket: string respresentation of three floats (separated by commas) for the gaze vector of the left eye,  e.g. `1.234,56.7,-8`
+Trigger Name: `_xjvb_eyeLRVec`  
+text1 Value Socket: string respresentation of three floats (separated by commas) for the gaze vector of the left eye,  e.g. `1.234,56.7,-8`  
 text2 Value Socket: string respresentation of three floats (separated by commas) for the gaze vector of the right eye, e.g. `1.234,56.7,-8`
 
 ## Development
